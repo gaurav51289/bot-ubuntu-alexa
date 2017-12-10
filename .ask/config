@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.e1411800-54d3-46d1-bfbd-7a68b300cbc9",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-buntu-bot-default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

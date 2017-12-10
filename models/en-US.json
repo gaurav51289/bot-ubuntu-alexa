@@ -1,0 +1,85 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "bot ubuntu",
+      "types": [
+        {
+          "name": "ACTION",
+          "values": [
+            {
+              "name": {
+                "value": "install"
+              }
+            },
+            {
+              "name": {
+                "value": "upgrade"
+              }
+            },
+            {
+              "name": {
+                "value": "update"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SOMETHING",
+          "values": [
+            {
+              "name": {
+                "value": "driver"
+              }
+            },
+            {
+              "name": {
+                "value": "python2.7"
+              }
+            },
+            {
+              "name": {
+                "value": "mouse"
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "QuestionIntent",
+          "slots": [
+            {
+              "name": "action",
+              "type": "ACTION"
+            },
+            {
+              "name": "something",
+              "type": "SOMETHING"
+            },
+            {
+              "name": "quetype",
+              "type": "AMAZON.LITERAL"
+            }
+          ],
+          "samples": [
+            "My question is {action} {something}",
+            "My question is {how to|quetype} {action} {something}",
+            "My question is {what is|quetype} {action} {something}"
+          ]
+        }
+      ]
+    }
+  }
+}
