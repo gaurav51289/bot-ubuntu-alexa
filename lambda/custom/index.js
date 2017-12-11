@@ -2,7 +2,7 @@
 var Alexa = require("alexa-sdk");
 var http = require("http");
 
-var API = 'ec2-34-228-57-81.compute-1.amazonaws.com';
+var API = 'ec2-184-72-137-125.compute-1.amazonaws.com';
 
 
 
