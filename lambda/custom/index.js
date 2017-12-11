@@ -1,8 +1,8 @@
 'use strict';
 var Alexa = require("alexa-sdk");
-var https = require("https");
+var http = require("http");
 
-var API = 'dummybackend1.herokuapp.com';
+var API = 'ec2-34-228-57-81.compute-1.amazonaws.com';
 
 
 
@@ -19,7 +19,8 @@ function getAnswer(question, callback) {
 
     var myAPI = {
         host: API,
-        path: '/ask',
+        path: '/ask/',
+        port: 5000,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -27,7 +28,7 @@ function getAnswer(question, callback) {
         }
     };
 
-    var req = https.request(myAPI, function (res) {
+    var req = http.request(myAPI, function (res) {
             res.setEncoding('utf8');
             var returnData = "";
 
